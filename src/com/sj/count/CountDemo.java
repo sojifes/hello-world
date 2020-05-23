@@ -15,7 +15,7 @@ public class CountDemo {
 		System.out.println("¿ªÔ´µØÖ·£ºhttps://github.com/sojifes/hello-world.git");
 		Count a = new Count();
 		for(int i = 0; i < 3; i++) {
-			a.choose();
+			a.start();
 		}
 		a.count();
 	}
