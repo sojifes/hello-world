@@ -12,6 +12,7 @@ public class CountDemo {
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 		System.out.println("计算学生综测分的小程序");
+		System.out.println("注意！因为使用double数据类型可能导致小数点不精确\n结果仅供参考");
 		System.out.println("开源地址：https://github.com/sojifes/hello-world.git");
 		Count a = new Count();
 		for(int i = 0; i < 3; i++) {

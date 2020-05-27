@@ -48,10 +48,21 @@ public class Count implements Info{
 			System.out.println();
 		} else if(flag == 2) {
 			System.out.println("(2)、学业素质分：");
-			System.out.print("请输入你的学分加权平均分：");
-			double goal = in.nextDouble(); //学分加权平均分
-			nums = (nums += goal) * 0.8;
-			System.out.println("已设定基础分：" + nums);
+			System.out.print("你想输入的是？1、学分加权平均分；2、基本分，输入其他退出程序:");
+			int num = in.nextInt();
+			if(num == 1) {
+				System.out.print("请输入你的学分加权平均分：");
+				double goal = in.nextDouble(); //学分加权平均分
+				nums = (nums += goal) * 0.8;
+				System.out.println("已设定基本分：" + nums);
+			} else if(num ==2) {
+				System.out.print("请输入你的基本分：");
+				nums = in.nextDouble();
+				System.out.println("已设定基础分：" + nums);
+			} else {
+				System.out.println("程序退出");
+				System.exit(0);
+			}
 			num2 = getInput(nums);
 			System.out.println("学业素质分：" + num2);
 			System.out.println();
@@ -124,12 +135,12 @@ public class Count implements Info{
 		//计算最终得分
 		double sum = 0;
 		//System.out.println(num1 + " " + num2 + " " + num3);
-		System.out.print("计算该学生综测总分为：");
 		num1 *= rate1;
 		num2 *= rate2;
 		num3 *= rate3;
-		//System.out.println(num1 + " " + num2 + " " + num3);
+		System.out.println(num1 + " " + num2 + " " + num3);
 		sum = num1 + num2 + num3;
+		System.out.print("计算该学生综测总分为：");
 		System.out.println(sum);
 	}
 
